@@ -4,12 +4,19 @@ w=0
 t=7
 while True:
     eingabe=input()
-    if eingabe=="ende" or eingabe=="end" or eingabe=="Ende":
+    if not eingabe.isdigit() :
         break
     x=int(eingabe)
     w=w+x
     n=n+1
     if x<t:
         t=x
-print(w/n)
-print(t)
+if n>0:
+    print("Durchschnitt:",w/n)
+    print("Beste Note:", t)
+elif n==0:
+    print("fehler")
+
+
+
+
